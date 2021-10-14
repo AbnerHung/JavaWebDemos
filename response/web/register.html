@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<script>
+        window.onload = function (){
+            let img = document.getElementById("checkCode");
+            img.onclick = function (){
+                //加时间戳
+                let date = new Date();
+                img.src = "/response/checkCode?"+date;
+            }
+            let change = document.getElementById("change");
+            change.onclick = function (){
+                //加时间戳
+                let date = new Date();
+                img.src = "/response/checkCode?"+date;
+            }
+        }
+	</script>
+</head>
+<body>
+	<img src="/response/checkCode" id="checkCode"><br>
+	<a href="" id="change">看不清？换一张！</a>
+
+
+</body>
+</html>
