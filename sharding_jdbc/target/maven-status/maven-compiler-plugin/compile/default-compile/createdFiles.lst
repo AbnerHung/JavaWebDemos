@@ -1,0 +1,7 @@
+com\example\sharding_jdbc\mapper\UdictMapper.class
+com\example\sharding_jdbc\entity\User.class
+com\example\sharding_jdbc\mapper\CourseMapper.class
+com\example\sharding_jdbc\ShardingJdbcApplication.class
+com\example\sharding_jdbc\mapper\UserMapper.class
+com\example\sharding_jdbc\entity\Udict.class
+com\example\sharding_jdbc\entity\Course.class
