@@ -39,11 +39,26 @@
 				 $("#fk").appendTo($("#city"));
              });
              // <input type="button" value="将反恐放置到city的最前面"  id="b2"/>
-
+             $("#b2").click(function () {
+                 //prepend
+                 //$("#city").prepend($("#fk"));
+                 //prepend to
+                 $("#fk").prependTo($("#city"));
+             });
              // <input type="button" value="将反恐插入到天津后面"  id="b3"/>
-
+             $("#b3").click(function () {
+                 // after
+                 // $("#tj").after($("#fk"));
+                 // insertAfter
+                 $("#fk").insertAfter($("#tj"));
+             });
              // <input type="button" value="将反恐插入到天津前面"  id="b4"/>
-
+             $("#b4").click(function () {
+                 // before
+                 // $("#tj").before($("#fk"));
+                 // insertBefore
+                 $("#fk").insertBefore($("#tj"));
+             });
          });
 
 		
