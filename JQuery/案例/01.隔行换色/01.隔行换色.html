@@ -3,11 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script  src="../../js/jquery-3.3.1.min.js"></script>
+		<script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		
 		<script>
 			//需求：将数据行的奇数行背景色设置为 pink，偶数行背景色设置为 yellow
-		
+			$(function () {
+				//1.获取奇数行tr，设置背景色为pink
+				$("tr:gt(1):odd").css("backgroundColor", "pink");
+				$("tr:gt(1):even").css("backgroundColor", "yellow");
+            });
 		</script>
 	</head>
 	<body>
