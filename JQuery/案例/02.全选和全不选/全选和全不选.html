@@ -3,8 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script  src="../../js/jquery-3.3.1.min.js"></script>
-		
+		<script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+            //需要保证下面的复选框状态和第一个复选框的选中状态一致
+            function selectAll(obj) {
+				$(".itemSelect").prop("checked", obj.checked);
+            }
+		</script>
 	</head>
 	<body>
 		<table id="tab1" border="1" width="800" align="center" >
