@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<script  src="../../js/jquery-3.3.1.min.js"></script>
+		<script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 		<style>
@@ -27,7 +27,19 @@
 		<script>
 
 			//需求：实现下拉列表选择条目左右选择功能
+			$(function () {
+				//toRight
+				$("#toRight").click(function () {
+					//获取右边的下拉列表对象，append左边下拉列表中选中的option
+					$("#rightName").append($("#leftName > option:selected"));
 
+                });
+                //toLeft
+                $("#toLeft").click(function () {
+                    $("#leftName").append($("#rightName > option:selected"));
+
+                });
+            });
 
 		</script>
 
