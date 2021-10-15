@@ -5,7 +5,31 @@
     <title></title>
     <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
+        $(function () {
+            //1.获取name对象，绑定click对象
+            /*$("#name").click(function () {
+                alert("fuck");
+            });*/
 
+            //2.给name绑定鼠标移动到元素之上事件。绑定鼠标移出事件
+            /*$("#name").mouseover(function () {
+                alert("mouse over");
+            });
+            $("#name").mouseout(function () {
+                alert("mouse out");
+            });*/
+            //简化操作，链式编程
+            /*$("#name").mouseover(function () {
+                alert("mouse over");
+            }).mouseout(function () {
+                alert("mouse out");
+            });*/
+
+            alert("getting focus")
+            $("#name").focus(); //让文本输入框获得焦点
+
+            //表单对象.submit()让表单提交
+        });
 
     </script>
 </head>
