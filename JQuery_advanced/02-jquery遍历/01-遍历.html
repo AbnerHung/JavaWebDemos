@@ -5,7 +5,48 @@
     <title></title>
     <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
+        $(function () {
+           //1.获取所有的ul下的li
+            let citys = $("#city li");
 
+            /*
+            //2.js方式 遍历li
+            for (const city of citys) {
+                //获取内容
+                alert(city.innerHTML);
+            }
+            */
+
+           /* //2.jq对象.each(callback) 方式遍历
+            citys.each(function (index,element) {
+                // 3.1获取li对象第一种方式 this
+                // alert(this.innerHTML);
+
+                // 3.2 第二种方式 在回调函数中定义参数 index(索引) element(元素对象)
+                // alert(index+":"+element.innerHTML);
+                // alert(index+":"+$(element).html());
+
+                //判断如果是上海，结束循环
+                if("上海"==$(element).html()){
+                    //返回false相当于break 返回true相当于continue
+                    return true;
+                }
+                alert(index+":"+$(element).html());
+            });*/
+
+            /*
+            //3. $.each(object, [callback])方式遍历
+            $.each(citys,function (index,element) {
+                alert(index+":"+$(element).html());
+            })
+            */
+
+            //4.for of方式 jquery3.0版本后提供支持
+            for (const city of citys) {
+                alert($(city).html());
+            }
+
+        });
 
     </script>
 </head>
