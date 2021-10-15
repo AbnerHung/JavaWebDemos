@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(function () {
+                // 获取myinput 的value值
+
+				let val = $("#myinput").val();
+                //alert(val);
+                $("#myinput").val("李四");
+                // 获取mydiv的标签体内容
+				let html = $("#mydiv").html();
+                //$("#mydiv").html("<p>fuck</p>");
+                //alert(html);
+                // 获取mydiv文本内容
+				let text = $("#mydiv").text();
+                alert(text);
+            })
+
+		</script>
+		
+	</head>
+	<body>
+		<input id="myinput" type="text" name="username" value="张三" /><br />
+		<div id="mydiv"><p><a href="#">标题标签</a></p></div>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件绑定</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		//dom文档加载完成后执行
+		$(function () {
+            //给b1按钮添加单击事件
+            //1.获取b1按钮
+            $("#b1").click(function () {
+                alert("abasdfas");
+            });
+        })
+
+	</script>
+</head>
+<body>
+<div id="div1">div1...</div>
+	<div id="div2">div2...</div>
+	<input type="button" value="tap me" id="b1">
+</body>
+</html>
