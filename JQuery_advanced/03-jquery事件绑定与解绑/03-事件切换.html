@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <title></title>
     <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.0.0.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
-        
-        
+        $(function () {
+           $("#btn").toggle(function () {
+               $("#myDiv").css("backgroundColor","green");
+           }, function () {
+               $("#myDiv").css("backgroundColor","red");
+           });
+        });
+
 
     </script>
 </head>
