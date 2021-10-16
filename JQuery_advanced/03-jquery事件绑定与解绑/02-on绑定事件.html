@@ -5,7 +5,16 @@
     <title></title>
     <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
+        $(function () {
+            $("#btn").on("click", function () {
+                alert("我被点击了...");
+            });
 
+            $("#btn2").click(function () {
+                // $("#btn").off();将组件上的所有事件全部解绑
+                $("#btn").off("click");
+            });
+        });
 
     </script>
 </head>
