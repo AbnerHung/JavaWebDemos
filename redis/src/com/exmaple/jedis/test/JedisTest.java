@@ -2,6 +2,8 @@ package com.exmaple.jedis.test;
 
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.JedisPoolConfig;
 
 import java.util.List;
 import java.util.Map;
@@ -114,6 +116,29 @@ public class JedisTest {
 
         Set<String> mysortedset = jedis.zrange("mysortedset",0,-1);
         System.out.println(mysortedset);
+        jedis.close();
+    }
+
+    /**
+     * Jedis连接池使用
+     */
+    @Test
+    public void test7(){
+        //0.创建一个配置对象
+        JedisPoolConfig conig = new JedisPoolConfig();
+        conig.setMaxTotal(50);
+        conig.setMaxIdle(10);
+
+        //1.创建Jedis连接池对象
+        JedisPool jedisPool = new JedisPool(conig,"127.0.0.1",6379);
+
+        //2.获取连接
+        Jedis jedis = jedisPool.getResource();
+
+        //3.使用
+        jedis.set("haha","f**k");
+
+        //4.关闭 归还到连接池中
         jedis.close();
     }
 }
