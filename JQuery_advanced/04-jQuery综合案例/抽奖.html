@@ -8,14 +8,14 @@
 <body>
 
 <!-- 小像框 -->
-<div style="border-style:dotted;width:160px;height:100px">
-    <img id="img1ID" src="../img/man00.jpg" style="width:160px;height:100px"/>
+<div style="border-style:dotted;width:300px;height:300px">
+    <img id="img1ID" src="../img/man00.jpg" style="width:300px;height:300px"/>
 </div>
 
 <!-- 大像框 -->
 <div
-        style="border-style:double;width:800px;height:500px;position:absolute;left:500px;top:10px">
-    <img id="img2ID" src="../img/man00.jpg" width="800px" height="500px"/>
+        style="border-style:double;width:700px;height:700px;position:absolute;left:500px;top:10px">
+    <img id="img2ID" src="../img/man00.jpg" width="700px" height="700px"/>
 </div>
 
 <!-- 开始按钮 -->
@@ -40,12 +40,42 @@
     var imgs = [
         "../img/man00.jpg",
         "../img/man01.jpg",
-        "../img/man02.jpg",
         "../img/man03.jpg",
         "../img/man04.jpg",
         "../img/man05.jpg",
-        "../img/man06.jpg"
+        "../img/man06.jpg",
+        "../img/man07.jpg",
+        "../img/man08.jpg",
+        "../img/man09.jpg",
+        "../img/man10.jpg"
     ];
+
+    var startId;
+    var index;
+
+    $(function () {
+        $("#startID").prop("disabled", false);
+        $("#stopID").prop("disabled", true);
+    })
+    function imgStart() {
+        $("#startID").prop("disabled", true);
+        $("#stopID").prop("disabled", false);
+        startId = setInterval(function () {
+            index = Math.floor(Math.random()*10);
+            $("#img1ID").prop("src",imgs[index]);
+        },50);
+    };
+
+    function imgStop() {
+        clearInterval(startId);
+        $("#startID").prop("disabled", false);
+        $("#stopID").prop("disabled", true);
+        $("#img2ID").prop("src", imgs[index]).hide();
+        $("#img2ID").show(1000);
+    }
+
+
+
 
 </script>
 </body>
