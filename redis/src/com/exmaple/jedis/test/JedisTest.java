@@ -1,5 +1,6 @@
 package com.exmaple.jedis.test;
 
+import com.exmaple.jedis.util.JedisPoolUtils;
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -139,6 +140,17 @@ public class JedisTest {
         jedis.set("haha","f**k");
 
         //4.关闭 归还到连接池中
+        jedis.close();
+    }
+
+    @Test
+    public void test8(){
+        //通过连接池工具类
+        Jedis jedis = JedisPoolUtils.getJedis();
+
+        //使用
+        jedis.set("haha","f**k !");
+
         jedis.close();
     }
 }
