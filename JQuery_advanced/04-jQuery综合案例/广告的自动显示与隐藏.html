@@ -10,7 +10,19 @@
     <!--引入jquery-->
     <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
     <script>
-
+        $(function () {
+             //定义定时器，调用adShow方法
+            setTimeout(adShow,3000);
+            setTimeout(adHide,8000);
+        });
+        
+        function adShow() {
+            $("#ad").show("slow");
+        };
+        function adHide() {
+            $("#ad").hide("slow");
+        };
+        
     </script>
 </head>
 <body>
