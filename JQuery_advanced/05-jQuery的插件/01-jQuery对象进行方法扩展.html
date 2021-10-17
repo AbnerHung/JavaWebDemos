@@ -5,7 +5,31 @@
     <title>01-jQuery对象进行方法扩展</title>
     <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
+        //1.定义jquery对象的插件
 
+        // $.fn.entend(object) 增强JQuery获取的对象的功能 $("#id")
+        $.fn.extend({
+            //定义了一个check()方法
+            check:function () {
+                //让复选框选中
+                this.prop("checked",true);
+            },
+            uncheck:function () {
+                //让复选框不选中
+                this.prop("checked",false);
+            }
+        });
+
+        $(function () {
+            //获取按钮
+            $("#btn-check").click(function () {
+                $("input[type='checkbox']").check();
+            });
+
+            $("#btn-uncheck").click(function () {
+                $("input[type='checkbox']").uncheck();
+            });
+        });
     </script>
 </head>
 <body>
@@ -18,4 +42,3 @@
 
 </body>
 </html>
-
